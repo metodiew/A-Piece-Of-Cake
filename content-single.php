@@ -12,6 +12,14 @@
 			<?php apoc_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
+	
+	<?php 
+	if ( has_post_thumbnail() ) {
+		the_post_thumbnail( 'large', array( 'class' => 'aligncenter' ) );
+	}
+	?>
+
+	<div class="clear"></div>
 
 	<div class="entry-content">
 		<?php the_content(); ?>

@@ -17,7 +17,7 @@
 	
 	<?php 
 	if ( has_post_thumbnail() ) {
-		the_post_thumbnail( 'medium', array( 'class' => 'alignleft' ) );
+		the_post_thumbnail( 'large', array( 'class' => 'aligncenter' ) );
 	}
 	?>
 
