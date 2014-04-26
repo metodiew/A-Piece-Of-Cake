@@ -26,7 +26,7 @@ function apoc_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'apoc_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '68cef0',
-		'width'                  => 1000,
+		'width'                  => 1270,
 		'height'                 => 250,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'apoc_header_style',
