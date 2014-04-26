@@ -96,9 +96,9 @@ add_action( 'widgets_init', 'apoc_widgets_init' );
 function apoc_scripts() {
 	// Use minified libraries if SCRIPT_DEBUG is turned off
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+	wp_enqueue_style( 'apoc-style', get_template_directory_uri( __FILE__ ) . '/css/style.css' );
 	
-	wp_enqueue_style( 'apoc-style', get_template_directory_uri( __FILE__ ) . '/css/style' . $suffix . '.css' );
-		
 	wp_enqueue_style( 'apoc-font-awesome', get_template_directory_uri( __FILE__ ) . '/css/font-awesome' . $suffix . '.css' );
 
 	wp_enqueue_script( 'apoc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
