@@ -67,8 +67,7 @@ function apoc_header_style() {
 		// If the user has set a custom color for the text use that
 		else :
 	?>
-		.site-title a,
-		.site-description {
+		.site-title a {
 			color: #<?php echo $header_text_color; ?>;
 		}
 	<?php endif; ?>
@@ -115,10 +114,13 @@ function apoc_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
-		<h1 class="site-title"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
+		<?php if ( display_header_text() ) : ?>
+			<h1 class="site-title"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+			<div class="displaying-header-text" id="desc"><?php bloginfo( 'description' ); ?></div>
+		<?php endif; ?>
+		
 		<?php if ( get_header_image() ) : ?>
-		<img src="<?php header_image(); ?>" alt="">
+			<img src="<?php header_image(); ?>" alt="Header Image">
 		<?php endif; ?>
 	</div>
 <?php

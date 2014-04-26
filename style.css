@@ -3,13 +3,13 @@ Theme Name: A Piece Of Cake
 Theme URI: http://themes.metodiew.com/apieceofcake/
 Author: Stanko Metodiev
 Author URI: http://metodiew.com
-Description: A Piece Of Cake is simple and clean WordPress theme, which firstly was created for a friend who needed to migrate from another blogging platform.
-Version: 0.9
+Description: A Piece Of Cake is simple and clean WordPress theme, based on _s starter theme.
+Version: 1.0
 License: GNU General Public License
 License URI: license.txt
 Text Domain: apoc
 Domain Path: /languages/
-Tags: white, yellow, light, one-column, two-columns, right-sidebar, custom-header, custom-menu, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, translation-ready
+Tags: white, yellow, light, one-column, two-columns, right-sidebar, fluid-layout,  responsive-layout, full-width-template, custom-header, custom-background, custom-menu, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -375,6 +375,11 @@ a:active {
 	float: left;
 	position: relative;
 }
+
+.main-navigation .current_page_item {
+	background-color: #d1fc3e;	
+}
+
 .main-navigation a {
 	display: block;
 	text-decoration: none;
@@ -562,6 +567,10 @@ a:active {
 .entry-summary {
 	margin: 1.5em 0 0;
 	padding-right: 10px;
+	font-family: 'Verdana, Geneva, sans-serif';
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.625;
 }
 .page-links {
 	clear: both;
@@ -697,7 +706,7 @@ a:hover {
 }
 
 a:visited {
-	color: #888888;
+	color: #68cef0;
 	text-decoration: none;
 }
 
@@ -712,15 +721,16 @@ abbr[title], abbr[data-original-title] {
 	border-bottom: 1px dotted #eee;
 }
 
-.site-header h1 {
+.site-title {
 	margin-bottom: 0;
 	color: #68cef0;
-	font-size: 26px;
+	font-size: 40px;
 	line-height: 1.846153846;
 }
 
 .site-description {
 	margin-bottom: 5px;
+	font-size: 20px;
 }
 
 h1.page-title,
@@ -768,7 +778,9 @@ h1.entry-title {
 
 #site-navigation a {
 	color: #000;
-	font: normal bold 15px Verdana, Geneva, sans-serif;
+	font-family: 'Comfortaa', cursive;
+	font-size: 15px;
+	font-weight: normal;
 }
 
 #site-navigation .current-menu-item {
@@ -828,75 +840,18 @@ h1.widget-title {
 	text-indent: 0;
 }
 
-/* Social Widget */
+/* Social Widget */.
+
 #secondary #social-icons {
 	margin-left: -10px;
 }
 
-.apoc-social {
-	display: inline-block;
-	width: 50px;
-	height: 55px;
+#social-icons a {
+	margin: 0 3px;
 }
 
-.apoc-social.facebook {
-	background: url(img/social-icons.png );
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
-}
-
-.apoc-social.facebook:hover {
-	background-position: 2px -50px;
-}
-
-.apoc-social.twitter {
-	background: url(img/social-icons.png );
-	background-repeat: no-repeat;
-	background-position: -48px 0px;
-}
-
-.apoc-social.twitter:hover {
-	background-position: -47px -50px;
-}
-
-.apoc-social.email {
-	background: url(img/social-icons.png );
-	background-repeat: no-repeat;
-	background-position: -97px 0px;
-}
-
-.apoc-social.email:hover {
-	background-position: -95px -50px;
-}
-
-.apoc-social.instagram {
-	background: url(img/social-icons.png );
-	background-repeat: no-repeat;
-	background-position: -147px 0px;
-}
-
-.apoc-social.instagram:hover {
-	background-position: -145px -50px;
-}
-
-.apoc-social.pinterest {
-	background: url(img/social-icons.png );
-	background-repeat: no-repeat;
-	background-position: -200px 0px;
-}
-
-.apoc-social.pinterest:hover {
-	background-position: -198px -50px;
-}
-
-.apoc-social.rss {
-	background: url(img/social-icons.png );
-	background-repeat: no-repeat;
-	background-position: -250px 0px;
-}
-
-.apoc-social.rss:hover {
-	background-position: -248px -50px;
+#social-icons > a i:hover {
+ color: #d1fc3e;
 }
 
 /* Footer */
@@ -938,7 +893,7 @@ h1.widget-title {
 	body {
 		width: 100%;
 	}
-	
+		
 	#wrapper {
 		width: 100%;
 		padding: 0;
@@ -971,6 +926,10 @@ h1.widget-title {
 } /* end of max-width: 768px */
 
 @media screen and (max-width: 600px) {
+	
+	.site-branding {
+		text-align: center;
+	}
 
 	#site-navigation {
 		display: none;
@@ -985,14 +944,30 @@ h1.widget-title {
 
 @media screen and (max-width: 480px) {
 	
+	.site-branding {
+		text-align: center;
+	}
+	
+	#secondary {
+		max-width: 99%;
+	}
+	
 	
 } /* end of max-width: 480px */
 
 @media screen and (max-width: 320px) {
 	
+	.site-branding {
+		text-align: center;
+	}
+	
 	
 } /* end of max-width: 320px */
 
 @media screen and (max-width: 240px) {
+	
+	.site-branding {
+		text-align: center;
+	}
 	
 } /* end of max-width: 240px */
